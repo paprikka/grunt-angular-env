@@ -1,5 +1,26 @@
-html
-  head
-    title hello
-  body
-    h1 Hi
+!!! 5
+//if lt IE 7
+    <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+//if IE 7
+    <html class="no-js lt-ie9 lt-ie8" lang="en">
+//if IE 8
+    <html class="no-js lt-ie9" lang="en">
+<!--[if gt IE 8]><!-->
+html(class="no-js", lang="pl", ng-app="app")
+  // <![endif]
+  
+  include partials/head
+  body(ng-controller='AppCtrl')
+    .wrapper
+      .navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            a.brand(href="#") Page
+      div(ng-view)
+      .push
+
+    footer.footer
+      .container
+        p
+          small
+            &copy; Page.com 2

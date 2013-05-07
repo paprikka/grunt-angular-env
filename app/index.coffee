@@ -1,1 +1,1 @@
-console.log 'index controller changed'
+console.log 'index controller changed: ' + Math.random()
