@@ -25,16 +25,16 @@ module.exports = (grunt)->
     regarde:
       scripts:
         files: 'app/**/*.coffee'
-        tasks: ['coffee', 'livereload']
+        tasks: ['clean:scripts', 'copy:assets', 'coffee', 'livereload']
         # spawn: yes
 
       templates:
         files: 'app/**/*.jade'
-        tasks: ['jade', 'livereload']
+        tasks: ['clean:templates', 'copy:assets', 'jade', 'livereload']
 
       styles:
         files: 'app/**/*.styl'
-        tasks: ['stylus', 'livereload']
+        tasks: ['clean:styles', 'copy:assets', 'stylus', 'livereload']
         # spawn: yes
 
     jade:
@@ -62,8 +62,26 @@ module.exports = (grunt)->
           base: 'public'
           # middleware: (connect, options)-> [lrSnippet, folderMount(connect, options.base)]
 
+    copy:
+      assets:
+        files:[
+          src:['**'], dest:'public/', cwd:'assets/', expand: yes
+        ]
+
+    clean:
+      public:
+        src: ['public/']
+      templates:
+        src: ['public/partials/', 'public/index.html']
+      scripts:
+        src: ['public/js/']
+      styles:
+        src: ['public/css/']
+
   grunt.loadNpmTasks 'grunt-contrib-concat'
+  grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-livereload'
@@ -71,3 +89,4 @@ module.exports = (grunt)->
   grunt.loadNpmTasks 'grunt-regarde'
 
   grunt.registerTask 'default', ['livereload-start', 'connect', 'regarde']
+  grunt.registerTask 'base', ['clean:public', 'copy:assets', 'coffee', 'jade', 'stylus']
