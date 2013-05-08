@@ -78,6 +78,16 @@ module.exports = (grunt)->
       styles:
         src: ['public/css/']
 
+    bower:
+      install:
+        options:
+          targetDir: './vendor',
+          layout: 'byType',
+          install: yes,
+          verbose: no,
+          cleanTargetDir: yes,
+          cleanBowerDir: yes
+
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
@@ -85,6 +95,7 @@ module.exports = (grunt)->
   grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-livereload'
+  grunt.loadNpmTasks 'grunt-bower-task'
   grunt.loadNpmTasks 'grunt-jade'
   grunt.loadNpmTasks 'grunt-regarde'
 
