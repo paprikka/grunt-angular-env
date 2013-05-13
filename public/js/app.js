@@ -1,7 +1,9 @@
 (function() {
-  var App;
+  var App, testVar;
 
   console.log('help controller');
+
+  testVar = 'hello';
 
   console.log('filter:capitalize');
 
