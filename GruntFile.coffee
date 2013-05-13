@@ -21,12 +21,22 @@ module.exports = (grunt)->
           'vendor/**/*.js'
         ]
         dest: 'public/js/vendor.js'
+      vendorScripts:
+        # Put specific bower-related vendor imports here. Don't include complete vendor dir.
+        src: [
+          'vendor/angular/angular.js'
+          'vendor/angular-cookies/angular-cookies.js'
+          'vendor/angular-mocks/angular-mocks.js'
+          'vendor/angular-resource/angular-resource.js'
+          'vendor/angular-sanitize/angular-sanitize.js'
+          'vendor/angular-polyfill/angular-polyfill.js'
+        ]
+        dest: 'public/js/vendor.js'
 
     regarde:
       scripts:
         files: 'app/**/*.coffee'
-        tasks: ['clean:scripts', 'copy:assets', 'coffee', 'livereload']
-        # spawn: yes
+        tasks: ['clean:scripts', 'copy:assets', 'coffee', 'concat:vendorScripts', 'livereload']
 
       templates:
         files: 'app/**/*.jade'
@@ -35,7 +45,6 @@ module.exports = (grunt)->
       styles:
         files: 'app/**/*.styl'
         tasks: ['clean:styles', 'copy:assets', 'stylus', 'livereload']
-        # spawn: yes
 
     jade:
       default:

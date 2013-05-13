@@ -9,3 +9,4 @@
 5. Add styles
 6. merge assets with public
 7. Manage vendor assets
+8. replace stylus with scss
