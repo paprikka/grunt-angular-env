@@ -4,9 +4,6 @@
 // base path, that will be used to resolve files and exclude
 basePath = '../';
 
-process.env['PHANTOMJS_BIN'] = '../node_modules/.bin/phantomjs';
-// process.env['ProgramFiles'] = 'C:\\Program\ Files\ (x86)';
-
 // list of files / patterns to load in the browser
 files = [
   JASMINE,
