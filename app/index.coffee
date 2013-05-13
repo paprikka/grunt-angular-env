@@ -3,9 +3,11 @@ console.log 'index controller changed: ' + Math.random()
 
 # Declare app level module which depends on filters, and services
 App = angular.module('app', [
-  # 'ngCookies'
-  # 'ngResource'
-  # 'app.controllers'
+  'ngCookies'
+  'ngResource'
+  # 'HelpIndexCtrl'
+  'app.controllers'
+
   # 'app.directives'
   # 'app.filters'
   # 'app.services'
@@ -18,14 +20,11 @@ App.config([
   ($routeProvider, $locationProvider, config) ->
 
     $routeProvider
-
-      .when('/preview/:src', {templateUrl: '/partials/preview.html',
-      controller: 'PreviewCtrl'})
-      .when('/preview', {templateUrl: '/partials/preview.html',
-      controller: 'PreviewCtrl'})
+      .when('/help', {templateUrl: '/partials/views/help/index.html',
+      controller: 'HelpIndexCtrl'})
 
     # Catch all
-      .otherwise({redirectTo: '/preview'})
+      .otherwise({redirectTo: '/help'})
 
     # Without server side support html5 must be disabled.
     $locationProvider.html5Mode off
