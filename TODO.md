@@ -8,3 +8,4 @@
   4.1 Add reloader snippet via middleware (ie. disable live-reload plugin)
 5. Add styles
 6. merge assets with public
+7. Manage vendor assets
