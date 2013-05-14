@@ -16,11 +16,6 @@ module.exports = (grunt)->
     concat:
       options:
         separator: ';'
-      dist:
-        src: [
-          'vendor/**/*.js'
-        ]
-        dest: 'public/js/vendor.js'
       vendorScripts:
         # Put specific bower-related vendor imports here. Don't include complete vendor dir.
         src: [

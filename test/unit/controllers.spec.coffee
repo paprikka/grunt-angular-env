@@ -1,18 +1,18 @@
-# 'use strict'
+'use strict'
 
-# # jasmine specs for controllers go here
+# jasmine specs for controllers go here
 
-# # TODO figure out how to test Controllers that use modules
-# describe "controllers", ->
-#   it "can be loaded via DI", ->
-#     expect(angular.module).toBeDefined()
-    
-#   beforeEach angular.module "app.controllers"
+# TODO figure out how to test Controllers that use modules
+describe "controllers", ->
+  it "can be loaded via DI", ->
+    expect(typeof angular.mock.module).toBe 'function'
+  beforeEach angular.mock.module "app.controllers"
+  scope = rootScope = {}
+  describe "AppCtrl", ->
+    it 'should have working scope', inject ($controller)->
+      ctrl = $controller 'AppCtrl', $scope:scope
+      expect(scope.test).toBe 'ok'      
 
-#   describe "AppCtrl", ->
-
-#     it "should exist", inject ($rootScope, $controller) ->
-#       scope = $rootScope.$new()
-#       ctrl = $controller "AppCtrl",
-#         $scope: scope,
-#       expect(scope.onePlusOne).toEqual(2)
+    it 'should have access to rootScope', inject ($controller)->
+      ctrl = $controller 'AppCtrl', $scope:scope
+      expect(scope.rootScopeVar).toBe 'bar'      

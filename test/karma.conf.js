@@ -12,6 +12,10 @@ files = [
   // Application Code //
   'vendor/jquery/jquery.js',
   'vendor/angular/angular.js',
+  'vendor/angular-cookies/angular-cookies.js',
+  'vendor/angular-resource/angular-resource.js',
+  'vendor/angular-sanitize/angular-sanitize.js',
+  'vendor/angular-mocks/angular-mocks.js',
   'vendor/angular-*/angular-*.js',
 
   //'app/scripts/**/*.js',
@@ -28,7 +32,7 @@ files = [
 
 // list of files to exclude
 exclude = [
-  'vendor/angular-mocks/angular-mocks.js',
+  // 'vendor/angular-mocks/angular-mocks.js',
 ];
 
 // use dots reporter, as travis terminal does not support escaping sequences

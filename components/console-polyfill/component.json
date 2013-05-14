@@ -1,0 +1,25 @@
+{
+  "name": "console-polyfill",
+  "repo": "paulmillr/console-polyfill",
+  "description": "Browser console polyfill. Makes it safe to do console.log()-s etc always.",
+  "version": "0.0.0",
+  "keywords": [
+    "console",
+    "polyfill"
+  ],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ],
+  "gitHead": "1804a4197749d539f18d8a4d6c6a136af9af80ab",
+  "readme": "# console-polyfill\r\nBrowser console polyfill. Makes it safe to do console.log()-s etc always.\r\n\r\n## Installation\r\n* Just include console-polyfill before your scripts.\r\n* `component install paulmillr/console-polyfill` if you’re using [component(1)](https://github.com/component/component).\r\n* `bower install console-polyfill` if you’re using [Twitter Bower](http://bower.io).\r\n\r\n## License\r\nThe MIT License (MIT)\r\n\r\nCopyright (c) 2013 Paul Miller (http://paulmillr.com/)\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the “Software”), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in\r\nall copies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\r\nTHE SOFTWARE.\r\n",
+  "readmeFilename": "README.md",
+  "_id": "console-polyfill@0.1.0",
+  "commit": "1804a4197749d539f18d8a4d6c6a136af9af80ab",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/paulmillr/console-polyfill.git"
+  }
+}
