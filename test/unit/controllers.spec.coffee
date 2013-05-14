@@ -4,6 +4,9 @@
 
 # # TODO figure out how to test Controllers that use modules
 # describe "controllers", ->
+#   it "can be loaded via DI", ->
+#     expect(angular.module).toBeDefined()
+    
 #   beforeEach angular.module "app.controllers"
 
 #   describe "AppCtrl", ->
