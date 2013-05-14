@@ -4,6 +4,10 @@
   "description": "AngularJS + Grunt",
   "version": "0.1.0",
   "dependencies": {},
+  "scripts":{
+    "start": "grunt",
+    "test" : "karma start test/karma.conf.js"
+  },
   "devDependencies": {
     "docco": "*",
     "grunt": "~0.4.1",

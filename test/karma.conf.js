@@ -60,7 +60,7 @@ logLevel = LOG_INFO;
 
 // enable / disable watching file and executing tests whenever any file changes
 // CLI --auto-watch --no-auto-watch
-autoWatch = false;
+autoWatch = true;
 
 // Start these browsers, currently available:
 // - Chrome
@@ -79,7 +79,7 @@ captureTimeout = 5000;
 
 // Auto run tests on start (when browsers are captured) and exit
 // CLI --single-run --no-single-run
-singleRun = true;
+singleRun = false;
 
 // report which specs are slower than 500ms
 // CLI --report-slower-than 500
